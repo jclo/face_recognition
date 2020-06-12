@@ -70,7 +70,7 @@ class Finder:
 
     def whois(self, image, detector, top=3):
       # First, extract the face from the passed-in image with 'mtcnn'
-      # or 'delib' face detector.
+      # or 'dlib' face detector.
       if detector == 'mtcnn':
           face = _mtcnn_extract_face(self.mtcnn, image)
       elif detector == 'dlib':
@@ -79,8 +79,8 @@ class Finder:
           raise Exception('Sorry, only mtcnn and dlib decoders are allowed!')
 
       # Then, convert the face image from (224, 224, 3) to four dimensions,
-      # the amplitude from 0 - 255 to -127.5 - +127.5. Finally, perform the
-      # predictions and convert these predictions to an human readable
+      # and the amplitude from 0 - 255 to -127.5 - +127.5. Finally, perform
+      # the predictions and convert these predictions to an human readable
       # information.
       x = face - 127.5
       image = np.expand_dims(x, axis=0)

@@ -1,16 +1,14 @@
 # ******************************************************************************
 """
-Short description.
-
-Long description ...
+A set of utility functions.
 
 
 Private Functions:
-    . none,
+    . none.
 
 
-Public:
-    . none,
+Public Functions:
+    . decode_predictions        decodes the predictions returned by VGGFace2.
 
 
 @namespace      _
@@ -24,6 +22,8 @@ import numpy as np
 
 LABEL_PATH = './datasets/labels_v1_8631.npy'
 
+
+# -- Public Functions ----------------------------------------------------------
 
 def decode_predictions(predictions, top=3):
     """Decodes the predictions returned by VGGFace2.

@@ -8,7 +8,7 @@ Private Functions:
 
 
 Public Class:
-    .  Haar                     a class to detect or extract a face from an image,
+    .  Dlib                     a class to detect or extract a face from an image,
 
 
 Private Methods:
